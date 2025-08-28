@@ -11,7 +11,7 @@ Para rodar o algoritmo, siga estes passos:
 1.  **Clone o repositório:** Abra o terminal ou prompt de comando e use o seguinte comando para clonar o projeto:
 
     ```bash
-    git clone [URL_DO_REPOSITORIO]
+    git clone https://github.com/MaxJunior2002/fundamentos-de-projetos-e-analise-de-algoritmos.git
     ```
 
 2.  **Navegue até o diretório do projeto:**
