@@ -33,7 +33,7 @@ Instruções para rodar o código no ambiente local.
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/MaxJunior2002/fundamentos-de-projetos-e-analise-de-algoritmos.git](https://github.com/MaxJunior2002/fundamentos-de-projetos-e-analise-de-algoritmos.git)
+    git clone https://github.com/MaxJunior2002/fundamentos-de-projetos-e-analise-de-algoritmos.git
     ```
 
 2.  **Navegue até o diretório do projeto:**
