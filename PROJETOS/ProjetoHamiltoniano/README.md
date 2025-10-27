@@ -60,7 +60,7 @@ Instruções para rodar o código no ambiente local.
     * **Classe NP (Nondeterministic Polynomial Time)**: O problema pertence a **NP**, pois a validade de uma solução (caminho) pode ser verificada em tempo polinomial.
     * **Classe NP-Completo (NP-C)**: O problema do Caminho Hamiltoniano é **NP-Completo**.
     * **Classe NP-Difícil**: Por ser NP-Completo, o problema também é **NP-Difícil**.
-    * **Classe P (Polynomial Time)**: O problema **não** pertence à classe P, a menos que se prove que $P=NP$.
+    * **Classe P (Polynomial Time)**: O problema **não** pertence à classe P, a menos que se prove que P=NP.
 
 2.  **Justificativa**
 
@@ -72,7 +72,7 @@ Instruções para rodar o código no ambiente local.
     * A complexidade temporal do algoritmo de Backtracking implementado, no pior caso, é **$O(N!)$**, onde $N$ é o número de vértices.
 
 2.  **Determinação da Complexidade**
-    * O método utilizado é a **contagem de operações** baseada na árvore de recursão. No pior caso (como em um grafo completo), o algoritmo deve explorar um número de caminhos que pode se aproximar do total de permutações de $N$ vértices (o que é $N!$). A natureza recursiva do backtracking, que tenta estender o caminho $N$ vezes, resulta em um crescimento fatorial.
+    * O método utilizado é a **contagem de operações** baseada na árvore de recursão. No pior caso (como em um grafo completo), o algoritmo deve explorar um número de caminhos que pode se aproximar do total de permutações de N vértices (o que é N!). A natureza recursiva do backtracking, que tenta estender o caminho $N$ vezes, resulta em um crescimento fatorial.
 
 #### Aplicação do Teorema Mestre
 
@@ -80,8 +80,8 @@ Instruções para rodar o código no ambiente local.
     * **Não é possível** aplicar o Teorema Mestre para determinar a complexidade do algoritmo de Backtracking para o Caminho Hamiltoniano no pior caso.
 
 * **Justificativa**
-    * O Teorema Mestre se aplica a relações de recorrência do tipo **divisão e conquista** na forma $T(n) = aT(n/b) + f(n)$.
-    * A recorrência do Backtracking, no pior caso ($T(N) \approx N \cdot T(N-1) + O(1)$), não se ajusta a este modelo, pois o problema não é dividido em subproblemas de tamanhos iguais e fixos, sendo, portanto, inaplicável.
+    * O Teorema Mestre se aplica a relações de recorrência do tipo **divisão e conquista** na forma T(n) = aT(n/b) + f(n).
+    * A recorrência do Backtracking, no pior caso (T(N) \approx N \cdot T(N-1) + O(1)), não se ajusta a este modelo, pois o problema não é dividido em subproblemas de tamanhos iguais e fixos, sendo, portanto, inaplicável.
 
 #### Análise dos Casos de Complexidade
 
@@ -89,9 +89,9 @@ Instruções para rodar o código no ambiente local.
 
 | Caso de Complexidade | Descrição |
 | :--- | :--- |
-| **Pior Caso** | Ocorre quando o algoritmo é forçado a explorar a maioria das possíveis permutações de vértices antes de encontrar a solução ou determinar que ela não existe. Isso leva à complexidade $O(N!)$. |
-| **Melhor Caso** | Ocorre quando o Caminho Hamiltoniano é encontrado imediatamente, na primeira sequência de vizinhos testada. A complexidade de tempo é próxima de $O(N)$. |
+| **Pior Caso** | Ocorre quando o algoritmo é forçado a explorar a maioria das possíveis permutações de vértices antes de encontrar a solução ou determinar que ela não existe. Isso leva à complexidade O(N!). |
+| **Melhor Caso** | Ocorre quando o Caminho Hamiltoniano é encontrado imediatamente, na primeira sequência de vizinhos testada. A complexidade de tempo é próxima de O(N). |
 | **Caso Médio** | O desempenho médio ao longo de todas as possíveis entradas de grafo. É significativamente melhor que o pior caso, mas ainda é exponencial para grafos densos. |
 
 2.  **Impacto no Desempenho do Algoritmo**
-    * O desempenho é drasticamente impactado pela diferença entre o **Pior Caso** ($O(N!)$) e o **Melhor Caso** ($O(N)$). O crescimento fatorial do pior caso significa que o algoritmo é **intratável** para grafos com um número moderado de vértices ($N > 20$), tornando-o inadequado para grandes entradas. O tempo de execução é extremamente sensível à estrutura do grafo.
+    * O desempenho é drasticamente impactado pela diferença entre o **Pior Caso** O(N!) e o **Melhor Caso** O(N). O crescimento fatorial do pior caso significa que o algoritmo é **intratável** para grafos com um número moderado de vértices (N > 20), tornando-o inadequado para grandes entradas. O tempo de execução é extremamente sensível à estrutura do grafo.
